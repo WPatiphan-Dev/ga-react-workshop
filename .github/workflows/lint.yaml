@@ -9,8 +9,13 @@ on:
       - opened
 jobs:
   lint:
+    environment: test demo
     runs-on: ubuntu-latest
     steps:
+      - name: Print Bun Version
+        run: echo "Bun Version:${{ vars.BUN_VERSION }}"
+      - name: Print API Key
+        run: echo "API Key:${{ secrets.API_KEY }}"
       - name: Clone Repo
         uses: actions/checkout@v5
       - name: Setup bun

@@ -11,6 +11,7 @@ on:
 #   BUN_VERSION: 1.2.8
 jobs:
   build:
+    environment: prod
     runs-on: ubuntu-latest
     steps:
       - name: Print Bun Version
