@@ -34,7 +34,7 @@ jobs:
       - build
     steps:
       - name: Download dist
-        uses: actions/download-artifact@4
+        uses: actions/download-artifact@v4
         with:
           name: dist-folder
           path: dist
