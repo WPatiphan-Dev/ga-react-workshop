@@ -19,10 +19,7 @@ function App() {
 			<h1>GA Workshop @KKU Hello</h1>
 			<h2>Hi Ningjajuju</h2>
 			<p>
-				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
-				assumenda eius neque commodi unde mollitia, eaque, itaque, fuga
-				blanditiis nesciunt quibusdam nostrum ipsam minima veritatis impedit
-				perspiciatis earum. Numquam, reprehenderit.
+				This about my coding Workshop Git Action @KKU
 			</p>
 			<div className="card">
 				<button onClick={() => setCount((count) => count + 1)}>
