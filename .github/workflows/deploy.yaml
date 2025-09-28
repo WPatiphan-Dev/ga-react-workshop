@@ -13,17 +13,22 @@ jobs:
   build:
     environment: prod
     runs-on: ubuntu-latest
+    container:
+      image: oven/bun:1
+      env:
+        NODE_ENV: production
     steps:
       - name: Print Bun Version
         run: echo "Bun Version:${{ vars.BUN_VERSION }}"
       - name: Print API Key
         run: echo "API Key:${{ secrets.API_KEY }}"
+        
       - name: Clone Repo
         uses: actions/checkout@v5
-      - name: Setup bun
-        uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: ${{ vars.BUN_VERSION }}
+      # - name: Setup bun
+      #   uses: oven-sh/setup-bun@v2
+      #   with:
+      #     bun-version: ${{ vars.BUN_VERSION }}
       - name: Caching
         uses: actions/cache@v4
         with:
