@@ -3,8 +3,6 @@ description: Install depend/caching
 runs:
   using: composite
   steps:
-    - name: Clone Repo
-      uses: actions/checkout@v5
     - name: Setup bun
       uses: oven-sh/setup-bun@v2
       with:
