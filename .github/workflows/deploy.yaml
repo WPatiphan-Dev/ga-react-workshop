@@ -65,7 +65,7 @@ jobs:
     steps:
       - name: Discord Notification
         env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          DISCORD_WEBHOOK: https://discord.com/api/webhooks/1421698805161529354/4Zn3jdckzh5qDWZ9pq7FbPB0XzMROF3xjSeynkKP1KzHjV9JuuBVoGJkN9pYZdfMgJfo
         uses: Ilshidur/action-discord@master
         with:
           args: "The project {{ EVENT_PAYLOAD.repository.full_name }} has been deployed."
