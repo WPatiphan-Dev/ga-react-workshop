@@ -4,7 +4,7 @@ inputs:
   bun-version:
     description: Bun Version
     required: false
-    default: 1.2.1
+    default: 1.2.8
 runs:
   using: composite
   steps:
