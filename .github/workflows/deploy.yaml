@@ -41,8 +41,6 @@ jobs:
         with:
           name: dist-folder
           path: dist/
-      - name: Force failure
-        run: exit 1
   deploy:
     if: success()
     runs-on: ubuntu-latest
@@ -61,11 +59,11 @@ jobs:
     needs:
       - build
       - deploy
-    if: failure()
+    if: always()
     steps:
       - name: Discord Notification
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         uses: Ilshidur/action-discord@master
         with:
-          args: "The project {{ EVENT_PAYLOAD.repository.full_name }} has been deployed."
+          args: "Commit ${{ github.sha }} has been deployed."
