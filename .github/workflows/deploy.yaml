@@ -19,7 +19,7 @@ jobs:
         NODE_ENV: production
     steps:
       - name: Install And Cache
-        uses: .github/actions/install-cache
+        uses: ./.github/actions/install-cache
       - name: Build
         run: bun run build
       - name: List dist/
