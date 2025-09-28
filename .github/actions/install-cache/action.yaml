@@ -1,12 +1,17 @@
 name: Install deps/cache
 description: Install depend/caching
+inputs:
+  bun-version:
+    description: Bun Version
+    required: false
+    default: 1.2.1
 runs:
   using: composite
   steps:
     - name: Setup bun
       uses: oven-sh/setup-bun@v2
       with:
-        bun-version: ${{ vars.BUN_VERSION }}
+        bun-version: ${{ inputs.bun-version }}
     - name: Caching
       uses: actions/cache@v4
       with:
